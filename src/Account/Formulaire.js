@@ -4,7 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUserCircle, faAt, faLock, faUser } from '@fortawesome/free-solid-svg-icons';
 import { Icon } from '@iconify/react';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
 
 
 
@@ -31,13 +32,30 @@ function Formulaire() {
 
       .catch(function (error) {
         console.log(error);
+        
         alert("Vérifiez votre Mot de passe ou E-mail")
       });
     axios.post(`http://localhost:5000/logout`)
       .then(res => console.log(res));
-    navigate("/", { replace: true });
 
   }
+
+  const [passwordType, setPasswordType] = useState("password");
+  const [passwordInput, setPasswordInput] = useState("");
+
+  const handlePasswordChange = (evnt) => {
+    evnt.preventDefault();
+  }
+
+  const togglePassword = () => {
+
+    if (passwordType === "password") {
+      setPasswordType("text")
+      return;
+    }
+    setPasswordType("password")
+  }
+
 
   return (
     <div className="bg-white lg:bg-white">
@@ -96,7 +114,7 @@ function Formulaire() {
                 <input onChange={(event) => setUsername(event.target.value)}
                   type="text"
                   placeholder="Entrez votre username"
-                  className="w-full py-3 pl-[35px] ring-1 ring-gray-300 rounded-xl text-black placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400  focus:bg-gray-300 focus:outline-offset-2 focus:outline-[#22b35e]"
+                  className="w-full py-3 pl-[35px] ring-1 ring-gray-300 rounded-xl text-black font-bold placeholder:font-light capitalize tracking-wide placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400  focus:bg-gray-300 focus:outline-offset-2 focus:outline-[#22b35e]"
                 />
               </div>
 
@@ -104,11 +122,13 @@ function Formulaire() {
                 <span className="form-icon left-[10px] top-[18%] text-[13px] absolute">
                   <Icon icon="bx:lock" />
                 </span>
-                <Icon icon="emojione-monotone:eye" className="absolute top-[15px] text-[17px] right-[10px] cursor-pointer" />
+                <span onClick={togglePassword}>
+                  {passwordType === "password" ? <Icon icon="bi:eye-slash" className="absolute top-[15px] text-[17px] right-[10px] cursor-pointer" /> : <Icon icon="emojione-monotone:eye" className="absolute top-[15px] text-[17px] right-[10px] cursor-pointer" />}
+                </span>
                 <input onChange={(event) => setPassword(event.target.value)}
-                  type="password"
+                  type={passwordType}
                   placeholder="Quel est votre Code Secret ?"
-                  className="w-full py-3 pl-[35px] ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:outline-offset-2 focus:bg-gray-300 focus:outline-[#22b35e]"
+                  className="w-full py-3 pl-[35px] ring-1 ring-gray-300 rounded-xl placeholder-gray-600 bg-transparent transition font-bold placeholder:font-light capitalize tracking-wide text-black disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:outline-offset-2 focus:bg-gray-300 focus:outline-[#22b35e]"
                 />
                 <button type="reset" className="w-max p-3 -mr-3">
                   <span className="text-sm tracking-wide text-red-600">Mot de passe oublié ?</span>
@@ -117,17 +137,19 @@ function Formulaire() {
 
               <div>
                 <button type="button" onClick={handleClick} className="w-full px-6 py-3 rounded-xl bg-[#22b35e] transition hover:bg-green-900 focus:bg-green-600 active:bg-green-800">
-                  <span className="font-semibold text-white text-lg">Login</span>
+                  <span className="font-semibold text-white text-lg font-[andika]">Se connecter</span>
                 </button>
-                <a href="#" type="reset" className="w-max p-3 -ml-3">
-                  <span className="text-sm tracking-wide text-green-900 font-bold">Créer un compte !</span>
-                </a>
+                <Link to='/signup'>
+                  <a href="#" type="reset" className="w-max p-3 -ml-3">
+                    <span className="text-sm tracking-wide text-green-900 font-bold">Créer un compte !</span>
+                  </a>
+                </Link>
               </div>
             </form>
 
             <div className="border-t pt-12">
               <div className="space-y-2 text-center">
-                <span className="block text-sm tracking-wide text-gray-500">© 2022 EaT, Inc..</span>
+                <span className="block text-sm tracking-wide text-gray-500">© 2022 EaT, Corp...</span>
               </div>
             </div>
           </div>

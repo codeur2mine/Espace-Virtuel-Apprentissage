@@ -1,12 +1,24 @@
 import React from 'react'
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faBell, faBook, faChalkboardTeacher, faDoorClosed, faDoorOpen, faEarth, faEarthAfrica, faGear, faHandHoldingDollar, faMessage, faPlane, faPlaneArrival, faPlay, faSchool, faSearch, faStar, faUser, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
-import Header from '../Header/Header'
+import { faSearch, faBullhorn, faUser, faCopy, faBook, faBars, faBell, faGear, faDoorOpen, faTimes, faMagic, faMarker, faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons';
+import Header from '../Header/Header';
+import { Link } from 'react-router-dom';
+import { Icon } from '@iconify/react';
 
-function Paiement() {
+import {
+    Card,
+    CardHeader,
+    CardBody,
+    CardFooter,
+    Typography,
+    Tooltip,
+} from "@material-tailwind/react";
+
+function Communaute() {
     const [show, setShow] = useState(false)
     const [see, setSee] = useState(false)
+
     return (
         <div>
             <header className="fixed z-10 py-4 bg-[#f2f2fc] border-b w-[100%]  mr-[70%] font-[andika]">
@@ -20,7 +32,7 @@ function Paiement() {
                         <FontAwesomeIcon className="text-sm mr-[15px]" icon={faBars}></FontAwesomeIcon>
                     </button>
                     <h2 className="text-2xl font-semibold text-gray-700 dark:text-gray-200">
-                        Paiements
+                        Communauté
                     </h2>
                     {/* <!-- Search input --> */}
                     <div className="flex justify-center flex-1 lg:mr-32">
@@ -121,9 +133,125 @@ function Paiement() {
                 </div>
             </header>
             <Header />
+            <section className="service section min-h-[100vh] block text-[#302e4d] bg-[#f2f2fc] opacity-1 p-[0_30px] font-[andika]" id="services">
+                <div className="container pb-[40px] pt-[60px] max-w-[1500px] w-[100%] m-auto">
+                    <div className="row flex flex-wrap ml-[10px] mr-[10px] relative pl-[8%] justify-between mt-[10%]">
 
-        </div>
+                        <div className="grid gap-4 grid-cols-4 grid-rows-1" >
+
+                            <Card className="w-80 hover:translate-y-[-10px] ease-in-out duration-300">
+                                <CardHeader className="h-80">
+                                    <img src="IMG_5730.jpg" alt="profile-picture" />
+                                </CardHeader>
+                                <CardBody className="text-center">
+                                    <Typography variant="h4" color="blue-gray" className="mb-2">
+                                        <h1 className="text-lg"> Zana Sidi-Mohamed Coulibaly</h1>
+                                    </Typography>
+                                    <Typography color="blue" className="text-blue-500 font-medium" textGradient>
+                                        CEO / Co-Founder
+                                    </Typography>
+                                </CardBody>
+                                <CardFooter className="flex justify-center gap-4 pt-1">
+                                    <Tooltip content="Follow">
+                                        <Typography
+                                            as="a"
+                                            href="#facebook"
+                                            variant="lead"
+
+                                        >
+                                            <Icon icon="ci:facebook" className="text-[#1e88e5]" />
+                                        </Typography>
+                                    </Tooltip>
+                                    <Tooltip content="Follow">
+                                        <Typography
+                                            as="a"
+                                            href="#twitter"
+                                            variant="lead"
+                                        >
+                                            <Icon icon="fluent:mail-16-filled" className="text-gray-500" />
+                                        </Typography>
+                                    </Tooltip>
+                                    <Tooltip content="Follow">
+                                        <Typography
+                                            as="a"
+                                            href="#linkedin"
+                                            variant="lead"
+                                        >
+                                            <Icon icon="logos:linkedin-icon" />
+                                        </Typography>
+
+                                    </Tooltip>
+
+                                </CardFooter>
+                                <CardFooter className="flex justify-between pt-1 border-t ">
+                                    <Typography variant="small">$899</Typography>
+                                    <Typography variant="small" color="gray" className="flex gap-1">
+                                        <FontAwesomeIcon className="mt-1" icon={faMapMarkerAlt}></FontAwesomeIcon>
+                                        Rabat, Maroc
+                                    </Typography>
+                                </CardFooter>
+                            </Card>
+
+                            <Card className="w-80 hover:translate-y-[-10px] ease-in-out duration-300">
+                                <CardHeader className="h-80">
+                                    <img src="laito.jpg" alt="profile-picture" />
+                                </CardHeader>
+                                <CardBody className="text-center">
+                                    <Typography variant="h4" color="blue-gray" className="mb-2">
+                                        <h1 className="text-lg"> N'golo Tiémoko Ali Coulibaly</h1>
+                                    </Typography>
+                                    <Typography color="blue" className="text-blue-500 font-medium" textGradient>
+                                        CEO / Co-Founder
+                                    </Typography>
+                                </CardBody>
+                                <CardFooter className="flex justify-center gap-4 pt-1">
+                                    <Tooltip content="Follow">
+                                        <Typography
+                                            as="a"
+                                            href="#facebook"
+                                            variant="lead"
+
+                                        >
+                                            <Icon icon="ci:facebook" className="text-[#1e88e5]" />
+                                        </Typography>
+                                    </Tooltip>
+                                    <Tooltip content="Follow">
+                                        <Typography
+                                            as="a"
+                                            href="#twitter"
+                                            variant="lead"
+                                        >
+                                            <Icon icon="fluent:mail-16-filled" className="text-gray-500" />
+                                        </Typography>
+                                    </Tooltip>
+                                    <Tooltip content="Follow">
+                                        <Typography
+                                            as="a"
+                                            href="#linkedin"
+                                            variant="lead"
+                                        >
+                                            <Icon icon="logos:linkedin-icon" />
+                                        </Typography>
+
+                                    </Tooltip>
+
+                                </CardFooter>
+                                <CardFooter className="flex justify-between pt-1 border-t ">
+                                    <Typography variant="small">$799</Typography>
+                                    <Typography variant="small" color="gray" className="flex gap-1">
+                                        <FontAwesomeIcon className="mt-1" icon={faMapMarkerAlt}></FontAwesomeIcon>
+                                        Paris, France
+                                    </Typography>
+                                </CardFooter>
+                            </Card>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section >
+        </div >
     )
 }
 
-export default Paiement
+export default Communaute

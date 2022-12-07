@@ -1,14 +1,63 @@
-import React from 'react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { EditorState, convertToRaw } from 'draft-js';
+import { Editor } from 'react-draft-wysiwyg';
+import draftToHtml from 'draftjs-to-html';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
+import axios from 'axios';
+import Header from '../../../Header/Header';
+import './editor.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBell, faDoorOpen, faGear, faMessage, faSearch, faUser, faPaperPlane, faPenToSquare, faTrash } from '@fortawesome/free-solid-svg-icons';
-import Header from '../../Header/Header';
 
-function Cahier() {
-    const [show, setShow] = useState(false)
-    const [see, setSee] = useState(false)
+
+
+function Add() {
+
+    const [show, setShow] = useState(false);
+    const [see, setSee] = useState(false);
+
+    const [title, setTitle] = useState('');
+    const [comment, setComment] = useState('');
+
+    const onChangevalue = (e) => {
+        setTitle(e.target.value)
+    }
+
+    const [userInfo, setuserInfo] = useState({
+        title: '',
+    });
+
+    const AddFeuille = (e) => {
+        e.preventDefault();
+    }
+    let editorState = EditorState.createEmpty();
+    const [description, setDescription] = useState(editorState);
+    const onEditorStateChange = (editorState) => {
+        setDescription(editorState);
+    }
+
+    const [isError, setError] = useState(null);
+    const addDetails = async (event) => {
+        try {
+            event.preventDefault();
+            event.persist();
+            if (userInfo.description.value.length < 50) {
+                setError('Champ requis, Ajouter une description Longueur minimum 50 caractères');
+                return;
+            }
+            axios.post(`http://localhost:5000/addArticle`, {
+                title: userInfo.title,
+                description: userInfo.description.value
+            })
+                .then(res => {
+                    if (res.data.success === true) {
+                    }
+                })
+        } catch (error) { throw error; }
+    }
+
     return (
-        <div>
+        <div className="font-[andika]">
             <header className="fixed z-10 py-4 bg-[#f2f2fc] border-b w-[100%] mr-[70%]">
                 <div className="container flex items-center justify-between h-full px-36 mx-auto text-purple-600 dark:text-purple-300 ">
                     {/* <!-- Mobile hamburger --> */}
@@ -119,9 +168,41 @@ function Cahier() {
                 </div>
             </header>
             <Header />
-
+            <main className="min-h-[100vh] block text-[#302e4d] bg-[#f2f2fc] opacity-1 p-[0_30px]">
+                <div className="container pb-[40px] pt-[60px] max-w-[1500px] w-[100%] m-auto" >
+                    <div className="row flex flex-wrap ml-[100px] mr-[10px] relative pl-[8%] justify-between mt-[8%]">
+                        <div className="container">
+                            <div className="row">
+                                <form onSubmit={addDetails} className="update__forms">
+                                    <h3 className="myaccount-content font-bold text-xl"> Ajouter  </h3>
+                                    <div className="form-row">
+                                        <div className="form-group col-md-12">
+                                            <label className="font-weight-bold label"> Titre <span className="required"> * </span> </label>
+                                            <input type="text" name="title" onChange={onChangevalue} className="form-control input" placeholder="Titre" required />
+                                        </div>
+                                        <div className="form-group col-md-12 editor">
+                                            <label className="font-weight-bold label"> Description <span className="required"> * </span> </label>
+                                            <Editor
+                                                editorState={description}
+                                                toolbarClassName="toolbarClassName"
+                                                wrapperClassName="wrapperClassName"
+                                                editorClassName="editorClassName"
+                                                onEditorStateChange={onEditorStateChange}
+                                            />
+                                            <textarea style={{ display: 'none' }} disabled ref={(val) => userInfo.description = val} value={draftToHtml(convertToRaw(description.getCurrentContent()))} className="textarea" />
+                                        </div>
+                                        {isError !== null && <div className="errors"> {isError} </div>}
+                                        <div className="form-group col-sm-12 text-right">
+                                            <button type="submit" className="btnText btn__theme" onClick={AddFeuille}> Envoyer  </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
     )
 }
-
-export default Cahier
+export default Add

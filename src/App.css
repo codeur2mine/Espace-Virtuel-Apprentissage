@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Andika&family=Oleo+Script&family=Pacifico&display=swap');
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+::-webkit-scrollbar-track{
+  background-color: #ffffff;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #22b35e;
+  border-radius: 3px;
+
+}
 * {
   margin: 0;
   padding: 0;
@@ -64,6 +76,50 @@ body {
     background-size: 100% auto;
 }
 
+.check {
+  -webkit-appearance: none;
+
+}
+ .check {
+  display: block;
+  position: absolute;
+  width: 3em;
+  height: 1.6em;
+  border-radius: 1em;
+  background: #928d8d;
+  box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  /* -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; */
+  -webkit-transition:  0.1s ease-in-out;
+  transition:  0.1s ease-in-out;
+}
+ .check:before {
+  content: "";
+  display: block;
+  width: 1.2em;
+  height: 1.2em;
+  border-radius: 1em;
+  background: #fff;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  left: 0.2em;
+  top: 0.2em;
+  -webkit-transition:  all 0.2s ease-in-out;
+  transition:  all 0.2s ease-in-out;
+}
+.check:checked {
+  background: #47cf73;
+}
+.check:checked:before {
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+  left: 1.6em;
+}
+
+.taille{
+  max-height: calc(100vh - 3.5rem);
+}
 
 /* .App {
   text-align: center;

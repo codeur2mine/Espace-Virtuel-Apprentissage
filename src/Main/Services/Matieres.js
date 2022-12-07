@@ -123,76 +123,185 @@ function Matieres() {
             <Header />
             <main className="min-h-[100vh] block text-[#302e4d] bg-[#f2f2fc] opacity-1 p-[0_30px] font-[andika]">
                 <div className="container pb-[40px] pt-[60px] max-w-[1500px] w-[100%] m-auto">
-                    <div className="flex flex-wrap ml-[10px] mr-[10px] relative pl-[8%] justify-between mt-[10%]">
-                        {/* <!-- Francais --> */}
-                        <div className="service-item padd-15 ml-[-15px] mr-[-15px] mb-[30px] flex-[0_0_33.33%] max-w-[33.33%]">
-                            <div className="service-item-inner bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
-                                <img className="w-[100%] h-[100%] object-cover" src="../français.jpg" alt="Image de Bernard Dadié" />
-                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">FRANCAIS</h4>
-                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
-                            </div>
-                        </div>
-                        {/* <!-- MATHEMATICS --> */}
-                        <div className="service-item padd-15 ml-[-15px] mr-[-15px] mb-[30px] flex-[0_0_33.33%] max-w-[33.33%]">
-                            <div className="service-item-inner bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
-                                <img className="w-[100%] h-[100%] object-cover" src="../maths.jpg" alt="Image de Bernard Dadié" />
-                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">MATHEMATIQUES</h4>
-                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
-                            </div>
-                        </div>
-                        {/* <!-- HIST-GEO --> */}
-                        <div className="service-item padd-15 ml-[-15px] mr-[-15px] mb-[30px] flex-[0_0_33.33%] max-w-[33.33%]">
-                            <div className="service-item-inner bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
-                                <img className="w-[100%] h-[100%] object-cover" src="../histoire-geo.jpg" alt="Image de Bernard Dadié" />
-                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">HISOIRE - GEOGRAPHIE</h4>
-                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
-                            </div>
-                        </div>
-                        {/* <!-- PHYSICAL --> */}
-                        <div className="service-item padd-15 ml-[-15px] mr-[-15px] mb-[30px] flex-[0_0_33.33%] max-w-[33.33%]">
-                            <div className="service-item-inner bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
-                                <img className="w-[100%] h-[100%] object-cover" src="../physique-chimie.jpg" alt="Image de Bernard Dadié" />
-                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">PHYSIQUE - CHIMIE</h4>
-                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
-                            </div>
-                        </div>
-                        {/* <!-- SVT --> */}
-                        <div className="service-item padd-15 ml-[-15px] mr-[-15px] mb-[30px] flex-[0_0_33.33%] max-w-[33.33%]">
-                            <div className="service-item-inner bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
-                                <img className="w-[100%] h-[100%] object-cover" src="../svt.jpg" alt="Image de Bernard Dadié" />
-                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">SVT</h4>
-                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
-                            </div>
-                        </div>
-
-                        {/* <!-- EDHC --> */}
-                        <div className="service-item padd-15 ml-[-15px] mr-[-15px] mb-[30px] flex-[0_0_33.33%] max-w-[33.33%]">
-                            <div className="service-item-inner bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
-                                <img className="w-[100%] h-[100%] object-cover" src="../edhc.png" alt="Image de Bernard Dadié" />
-                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">EDHC</h4>
-                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
-                            </div>
-                        </div>
-                        {/* <!-- ANGLAIS --> */}
-                        <div className="service-item padd-15 ml-[-15px] mr-[-15px] mb-[30px] flex-[0_0_33.33%] max-w-[33.33%]">
-                            <div className="service-item-inner bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
-                                <img className="w-[100%] h-[100%] object-cover" src="../anglais.png" alt="Image de Bernard Dadié" />
-                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">ANGLAIS</h4>
-                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
-                            </div>
-                        </div>
-
-                        {/* <!-- ESPAGNOL & ALLEMAND --> */}
-                        <div className="service-item padd-15 ml-[-15px] mr-[-15px] mb-[30px] flex-[0_0_33.33%] max-w-[33.33%]">
-                            <div className="service-item-inner bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
-                                <img className="w-[100%] h-[100%] object-cover" src="../all-esp.jpg" alt="Image de Bernard Dadié" />
+                     <div className="flex flex-wrap ml-[10px] mr-[10px] relative pl-[8%] justify-between mt-[10%]">
+                 
+                       <div className="grid grid-cols-4 gap-4 w-auto">
+                            <div className="bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px] ">
+                                <img className="w-[100%] h-[80%] object-cover" src="../all-esp.jpg" alt="Image de Bernard Dadié" />
                                 <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">ESPAGNOL - ALLEMAND</h4>
                                 <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
                             </div>
+                            <div className=" bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
+                                <img className="w-[100%] h-[80%] object-cover" src="../anglais.png" alt="Image de Bernard Dadié" />
+                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">ANGLAIS</h4>
+                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
+                            </div>
+                            <div className=" bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
+                                <img className="w-[100%] h-[80%] object-cover" src="../edhc.png" alt="Image de Bernard Dadié" />
+                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">EDHC</h4>
+                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
+                            </div>
+                            <div className=" bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
+                                <img className="w-[100%] h-[80%] object-cover" src="../svt.jpg" alt="Image de Bernard Dadié" />
+                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">SVT</h4>
+                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
+                            </div>
+                            <div className=" bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
+                                <img className="w-[100%] h-[80%] object-cover" src="../physique-chimie.jpg" alt="Image de Bernard Dadié" />
+                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">PHYSIQUE - CHIMIE</h4>
+                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
+                            </div>
+                            <div className=" bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
+                                <img className="w-[100%] h-[80%] object-cover" src="../histoire-geo.jpg" alt="Image de Bernard Dadié" />
+                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">HISOIRE - GEOGRAPHIE</h4>
+                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
+                            </div>
+                            <div className=" bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
+                                <img className="w-[100%] h-[80%] object-cover" src="../maths.jpg" alt="Image de Bernard Dadié" />
+                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">MATHEMATIQUES</h4>
+                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
+                            </div>
+                            <div className=" bg-[#fdf9ff] border border-[#e8dfec] rounded-[10px] p-[30px_15px] cursor-pointer text-center transition-all hover:scale 105 hover:shadow-[0_0_10px_rgba(48,46,77,0.3)] hover:border hover:border-[#22b35e] hover:text-[25px]">
+                                <img className="w-[100%] h-[80%] object-cover" src="../français.jpg" alt="Image de Bernard Dadié" />
+                                <h4 className="text-[18px] mb-[15px] text-[#302e4d] font-bold capitalize">FRANCAIS</h4>
+                                <p className="text-[16px] text-[#504e70] leading-10">Nbres de leçons</p>
+                            </div>
+
                         </div>
-                    </div>
+                    </div> 
+                    {/* <div className="box-container flex items-center justify-center flex-wrap">
+
+                        <div className="box w-[30rem] border relative m-[1.5rem]">
+                            <img src="français.jpg" alt="" className="h-[20rem] w-[100%] object-cover " />
+                            <h3 className="price absolute top-[16rem] right-[1rem] h-[8rem] w-[8rem] leading-[8rem] text-center border rounded-full bg-[#22b35e] text-[#fff] text-[3rem]">$50</h3>
+                            <div className="content p-[1rem]">
+                                <div className="stars">
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star-half"></i>
+                                </div>
+                                <a href="#" className="title hover:underline text-[#444] text-[1.5rem] capitalize">learn front end development</a>
+                                <p className="p-[1rem_0] text-[#666] text-[1.5rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p>
+                                <div className="info flex justify-between items-center pt-[.5rem] border-t">
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-clock"></i> 2 hours </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-calendar-alt"></i> 6 months </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="fas fa-book"></i> 12 modules </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="box w-[30rem] border relative m-[1.5rem]">
+                            <img src="edhc.png" alt="" className="h-[20rem] w-[100%] object-cover" />
+                            <h3 className="price absolute top-[16rem] right-[1rem] h-[8rem] w-[8rem] leading-[8rem] text-center border rounded-full bg-[#22b35e] text-[#fff] text-[3rem]">$50</h3>
+                            <div className="content p-[1rem]">
+                                <div className="stars">
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star-half"></i>
+                                </div>
+                                <a href="#" className="title hover:underline text-[#444] text-[1.5rem] capitalize">learn front end development</a>
+                                <p className="p-[1rem_0] text-[#666] text-[1.5rem] ">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p>
+                                <div className="info flex justify-between items-center pt-[.5rem] border-t">
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-clock"></i> 2 hours </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-calendar-alt"></i> 6 months </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="fas fa-book"></i> 12 modules </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="box w-[30rem] border relative m-[1.5rem]">
+                            <img src="histoire-geo.jpg" alt="" className="h-[20rem] w-[100%] object-cover " />
+                            <h3 className="price absolute top-[16rem] right-[1rem] h-[8rem] w-[8rem] leading-[8rem] text-center border rounded-full bg-[#22b35e] text-[#fff] text-[3rem]">$50</h3>
+                            <div className="content p-[1rem]">
+                                <div className="stars">
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star-half"></i>
+                                </div>
+                                <a href="#" className="title hover:underline text-[#444] text-[1.5rem] capitalize">learn front end development</a>
+                                <p className="p-[1rem_0] text-[#666] text-[1.5rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p>
+                                <div className="info flex justify-between items-center pt-[.5rem] border-t">
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-clock"></i> 2 hours </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-calendar-alt"></i> 6 months </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="fas fa-book"></i> 12 modules </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="box w-[30rem] border relative m-[1.5rem]">
+                            <img src="svt.jpg" alt="" className="h-[20rem] w-[100%] object-cover" />
+                            <h3 className="price absolute top-[16rem] right-[1rem] h-[8rem] w-[8rem] leading-[8rem] text-center border rounded-full bg-[#22b35e] text-[#fff] text-[3rem]">$50</h3>
+                            <div className="content p-[1rem]">
+                                <div className="stars">
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star-half"></i>
+                                </div>
+                                <a href="#" className="title hover:underline text-[#444] text-[1.5rem] capitalize">learn front end development</a>
+                                <p className="p-[1rem_0] text-[#666] text-[1.5rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p>
+                                <div className="info flex justify-between items-center pt-[.5rem] border-t">
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-clock"></i> 2 hours </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-calendar-alt"></i> 6 months </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="fas fa-book"></i> 12 modules </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="box w-[30rem] border relative m-[1.5rem]">
+                            <img src="maths.jpg" alt="" className="h-[20rem] w-[100%] object-cover " />
+                            <h3 className="price absolute top-[16rem] right-[1rem] h-[8rem] w-[8rem] leading-[8rem] text-center border rounded-full bg-[#22b35e] text-[#fff] text-[3rem]">$50</h3>
+                            <div className="content p-[1rem]">
+                                <div className="stars">
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star-half"></i>
+                                </div>
+                                <a href="#" className="title hover:underline text-[#444] text-[1.5rem] capitalize">learn front end development</a>
+                                <p className="p-[1rem_0] text-[#666] text-[1.5rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p>
+                                <div className="info flex justify-between items-center pt-[.5rem] border-t">
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-clock"></i> 2 hours </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-calendar-alt"></i> 6 months </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="fas fa-book"></i> 12 modules </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="box w-[30rem] border relative m-[1.5rem]">
+                            <img src="anglais.png" alt="" className="h-[20rem] w-[100%] object-cover " />
+                            <h3 className="price absolute top-[16rem] right-[1rem] h-[8rem] w-[8rem] leading-[8rem] text-center border rounded-full bg-[#22b35e] text-[#fff] text-[3rem]">$50</h3>
+                            <div className="content p-[1rem]">
+                                <div className="stars">
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star"></i>
+                                    <i className="fas fa-star-half"></i>
+                                </div>
+                                <a href="#" className="title hover:underline text-[#444] text-[1.5rem] capitalize">learn front end development</a>
+                                <p className="p-[1rem_0] text-[#666] text-[1.5rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, beatae. Modi quos excepturi id quibusdam? Molestiae quis nihil non debitis!</p>
+                                <div className="info flex justify-between items-center pt-[.5rem] border-t">
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-clock"></i> 2 hours </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="far fa-calendar-alt"></i> 6 months </h3>
+                                    <h3 className="text-[1.5rem] p-[1rem] text-[#666]"> <i className="fas fa-book"></i> 12 modules </h3>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div> */}
                 </div>
+    
             </main>
+
         </div>
     )
 }

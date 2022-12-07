@@ -13,6 +13,7 @@ function Abs() {
     const [see, setSee] = useState(false)
     return (
         <div>
+
             <header className="fixed z-10 py-4 bg-[#f2f2fc] border-b w-[100%] mr-[70%] font-[andika]">
                 <div className="container flex items-center justify-between h-full px-36 mx-auto text-purple-600 dark:text-purple-300 ">
                     {/* <!-- Mobile hamburger --> */}
@@ -122,8 +123,8 @@ function Abs() {
                     </ul>
                 </div>
             </header>
-            <Header />
-            <main className=" block text-[#302e4d] opacity-1 p-[0_30px] bg-[#f2f2fc] font-[andika]">
+            <Header/>
+            <main className="block text-[#302e4d] opacity-1 p-[0_30px] bg-[#f2f2fc] font-[andika]">
                 <div className="container pb-[40px] pt-[60px] max-w-[1500px] w-[100%] m-auto" >
                     <div className="row flex flex-wrap ml-[10px] mr-[10px] relative pl-[8%] justify-between mt-[10%]">
                         <h1 className="text-3xl min-h-[20px] p-[19px] mb-[20px] border w-[100%] rounded-[10px] bg-gradient-to-r from-gray-200 to-gray-200">Déclarer une absence ou un Retard</h1>
@@ -238,8 +239,8 @@ function Abs() {
                     </div>
 
                 </div>
+            
             </main >
-
         </div >
     )
 }

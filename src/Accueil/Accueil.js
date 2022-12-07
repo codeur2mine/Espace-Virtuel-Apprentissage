@@ -4,6 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faBell, faBook, faChalkboardTeacher, faDoorClosed, faDoorOpen, faEarth, faEarthAfrica, faGear, faHandHoldingDollar, faMessage, faPlane, faPlaneArrival, faPlay, faSchool, faSearch, faStar, faUser, faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 import Header from '../Header/Header'
 import { Link } from 'react-router-dom';
+import {
+    Menu,
+    MenuHandler,
+    MenuList,
+    MenuItem,
+    Button,
+} from "@material-tailwind/react";
+
 
 
 
@@ -39,8 +47,10 @@ function Logo() {
                                 </Link>
 
                             </div>
-                            <div className="home-img pl-[20px] pr-[15px] flex-[0_0_30%]">
+                            <div className="home-img pl-[20px] pr-[15px] flex-[0_0_30%] relative">
                                 <img src="IMG_5730.jpg" alt="IMAGE DE MOMO" className="m-auto rounded-full h-[200px]" />
+                                <button type="button" className="absolute right-[25%] bottom-0 inline-block transform translate-x-1 -translate-y-1 bg-green-500 w-10 border rounded-[10px] m-[5px] p-[2px] hover:bg-green-900 border-white">
+                                    <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="pen-to-square" class="svg-inline--fa fa-pen-to-square text-white" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M490.3 40.4C512.2 62.27 512.2 97.73 490.3 119.6L460.3 149.7L362.3 51.72L392.4 21.66C414.3-.2135 449.7-.2135 471.6 21.66L490.3 40.4zM172.4 241.7L339.7 74.34L437.7 172.3L270.3 339.6C264.2 345.8 256.7 350.4 248.4 353.2L159.6 382.8C150.1 385.6 141.5 383.4 135 376.1C128.6 370.5 126.4 361 129.2 352.4L158.8 263.6C161.6 255.3 166.2 247.8 172.4 241.7V241.7zM192 63.1C209.7 63.1 224 78.33 224 95.1C224 113.7 209.7 127.1 192 127.1H96C78.33 127.1 64 142.3 64 159.1V416C64 433.7 78.33 448 96 448H352C369.7 448 384 433.7 384 416V319.1C384 302.3 398.3 287.1 416 287.1C433.7 287.1 448 302.3 448 319.1V416C448 469 405 512 352 512H96C42.98 512 0 469 0 416V159.1C0 106.1 42.98 63.1 96 63.1H192z"></path></svg></button>
                             </div>
 
                         </div>
@@ -80,7 +90,7 @@ function Logo() {
                                     </button>
                                 </li>
                                 {/* <!-- Notifications menu --> */}
-                                <li class="relative">
+                                <li className="relative">
                                     <button onClick={() => setShow(!show)}
                                         className="relative align-middle rounded-md focus:outline-none focus:shadow-outline-purple text-[#22b35e]">
                                         <FontAwesomeIcon className="text-sm mr-[15px]" icon={faBell} ></FontAwesomeIcon>
@@ -153,6 +163,7 @@ function Logo() {
                                             </a>
                                         </li>
                                     </ul> : null}
+                           
                                 </li>
                             </ul>
                         </div>
